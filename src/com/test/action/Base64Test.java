@@ -3,6 +3,8 @@
  */
 package com.test.action;
 
+import org.junit.Test;
+
 import com.test.util.Base64;
 
 /**
@@ -11,7 +13,8 @@ import com.test.util.Base64;
  * @version 1.0
  */
 public class Base64Test {
-	public static void main(String args[]){
+	@Test
+	public void base64Test(){
 		StringBuffer configFile = new StringBuffer();
 		configFile.append("<?xml version='1.0' encoding='UTF-8'?>");
 		configFile.append("<argorse>");

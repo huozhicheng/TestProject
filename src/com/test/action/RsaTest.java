@@ -10,6 +10,8 @@ import java.security.PublicKey;
 
 import javax.crypto.Cipher;
 
+import org.junit.Test;
+
 
 /**
  * RSA加减密测试
@@ -21,7 +23,8 @@ public class RsaTest {
 
 	static PublicKey publicKey;
 	static PrivateKey privateKey;
-	public static void main(String[] args) {
+	@Test
+	public void rsaTestDemo() {
 		try {
 			String s = "北京市海淀区";
 			RsaTest rsaTest = new RsaTest();
