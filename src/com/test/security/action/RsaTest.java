@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.test.action;
+package com.test.security.action;
 
 import java.security.KeyPair;
 import java.security.KeyPairGenerator;
@@ -11,6 +11,9 @@ import java.security.PublicKey;
 import javax.crypto.Cipher;
 
 import org.junit.Test;
+
+import com.test.security.util.Base64;
+import com.test.security.util.RSAUtility;
 
 
 /**
@@ -86,5 +89,21 @@ public class RsaTest {
 		cp.init(Cipher.DECRYPT_MODE, privateKey);
 		//解密数据
 		return cp.doFinal(rsaEncByte);
+	}
+	@Test
+	public void getPublicKey(){
+		try {
+			PublicKey pkey = RSAUtility.getPublickKey("97827999251931786011331257101039860019161246984328605110974093176037976837685111866678569994714635833629150686846743147242205382135488118004199599475305747442718127089447426155254804363623754145696366788413510844608513267611881763397053621480300534323240653468042208805075424959583222589406658867330717941509", "65537");
+			byte b[] = new RsaTest().encryptRSA("北京".getBytes("utf-8"), pkey);
+			StringBuffer sb = new StringBuffer();
+			for(byte a:b){
+				sb.append(a);
+			}
+			System.out.println("密文："+sb);
+			System.out.println(Base64.byteArrayToBase64(pkey.getEncoded()));
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 }

@@ -1,4 +1,4 @@
-package com.test.util;
+package com.test.security.util;
 
 public class Base64 {
 	/**

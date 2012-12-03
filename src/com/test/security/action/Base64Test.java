@@ -1,11 +1,11 @@
 /**
  * 
  */
-package com.test.action;
+package com.test.security.action;
 
 import org.junit.Test;
 
-import com.test.util.Base64;
+import com.test.security.util.Base64;
 
 /**
  * @author huozhicheng@gmail.com
