@@ -16,7 +16,6 @@ import org.junit.Test;
  */
 public class DateTest {
 
-	@Test
 	public void test(){
 		/*Date d = new Date();
 		Calendar c = Calendar.getInstance();
@@ -44,5 +43,15 @@ public class DateTest {
 		System.out.println(calendar.get(Calendar.DAY_OF_MONTH));//今天的日期
 		calendar.set(Calendar.DAY_OF_MONTH,calendar.get(Calendar.DAY_OF_MONTH)+1);//让日期加1  
 		System.out.println(calendar.get(Calendar.DAY_OF_MONTH));//加1之后的日期
+	}
+	@Test
+	public void sevenDay(){
+		Calendar calendar=Calendar.getInstance();
+		SimpleDateFormat df = new SimpleDateFormat("yyyyMMdd");
+		calendar.setTime(new Date());
+		calendar.set(Calendar.DAY_OF_MONTH, Calendar.DAY_OF_MONTH-5);
+		String d = df.format(calendar.getTime());
+		System.out.println("2012113009242".substring(0,8).compareTo(d));
+		
 	}
 }
