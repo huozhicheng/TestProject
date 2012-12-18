@@ -44,7 +44,10 @@ public class DateTest {
 		calendar.set(Calendar.DAY_OF_MONTH,calendar.get(Calendar.DAY_OF_MONTH)+1);//让日期加1  
 		System.out.println(calendar.get(Calendar.DAY_OF_MONTH));//加1之后的日期
 	}
-	@Test
+	/**
+	 * 7天前
+	 */
+	//@Test
 	public void sevenDay(){
 		Calendar calendar=Calendar.getInstance();
 		SimpleDateFormat df = new SimpleDateFormat("yyyyMMdd");
@@ -53,5 +56,14 @@ public class DateTest {
 		String d = df.format(calendar.getTime());
 		System.out.println("2012113009242".substring(0,8).compareTo(d));
 		
+	}
+	@Test
+	public  void timeAdd(){
+		Calendar calendar = Calendar.getInstance();
+		calendar.setTime(new Date());
+		calendar.add(Calendar.HOUR_OF_DAY, 3);
+		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		
+		System.out.println(calendar.getTimeInMillis()+" - "+new Date().getTime());
 	}
 }
