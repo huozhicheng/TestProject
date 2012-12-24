@@ -14,7 +14,12 @@ import javax.crypto.Cipher;
 import javax.crypto.KeyGenerator;
 import javax.crypto.SecretKey;
 import javax.crypto.spec.SecretKeySpec;
-
+/**
+ * RSA,3DES加减密类
+ * @author huozhicheng@gmail.com
+ * @date 2012-12-24下午2:19:18
+ * @version 1.0
+ */
 public class RSAUtility {
 
 	/**
@@ -86,8 +91,8 @@ public class RSAUtility {
 	/**
 	 * 根据modulus和public exponent得到公钥
 	 * 
-	 * @param modulus
-	 * @param publicExponent
+	 * @param modulus 十进制
+	 * @param publicExponent 十进制
 	 * @return
 	 * @throws Exception
 	 */

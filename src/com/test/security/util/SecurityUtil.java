@@ -20,13 +20,11 @@ import java.util.Enumeration;
 
 import javax.crypto.Cipher;
 
-/**  
- * @Title: SecurityUtil.java
- * @Package com.umpay.merchant.util
- * @Description: TODO
+/**
+ * 安全类，包括MD5加密、签名、读私钥公钥等方法
  * @author huozhicheng@gmail.com
- * @date 2012-5-25 下午04:57:01
- * @version V1.0  
+ * @date 2012-12-24下午2:16:27
+ * @version 1.0
  */
 public class SecurityUtil {
 
@@ -147,8 +145,8 @@ public class SecurityUtil {
 	}
 	/** 
 	 * 根据公钥modulus、publicExponent生成公钥
-	 * @param modulus   公钥publicExponent串
-	 * @param publicExponent  公钥publicExponent串
+	 * @param modulus   公钥publicExponent串    16进制
+	 * @param publicExponent  公钥publicExponent串    16进制
 	 * @return 返回公钥PublicKey
 	 * @throws Exception
 	 */

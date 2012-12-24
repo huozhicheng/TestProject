@@ -25,6 +25,7 @@ public class GetKeyFromFile {
 	@Test
 	public void test() throws UnrecoverableKeyException, KeyStoreException, NoSuchAlgorithmException, CertificateException, IOException {
 		PrivateKey pk = SecurityUtil.getPrivateKey("c:/898000000000002.pfx","898000000000002");
+		System.out.println(pk);
 	}
 
 }

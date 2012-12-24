@@ -63,7 +63,7 @@ public class DateTest {
 		calendar.setTime(new Date());
 		calendar.add(Calendar.HOUR_OF_DAY, 3);
 		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-		
+		df.format(calendar.getTime());
 		System.out.println(calendar.getTimeInMillis()+" - "+new Date().getTime());
 	}
 }
