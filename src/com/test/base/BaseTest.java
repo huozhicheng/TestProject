@@ -13,6 +13,6 @@ import org.junit.Test;
 public class BaseTest {
 	@Test
 	public void strTest(){
-		System.out.println("1.0".compareTo("1.1"));
+		System.out.println("1.0".compareTo("1.3"));
 	}
 }
