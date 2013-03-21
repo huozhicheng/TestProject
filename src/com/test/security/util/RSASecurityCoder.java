@@ -15,7 +15,7 @@ import javax.crypto.Cipher;
 import org.apache.commons.codec.binary.Base64;
 
 /**
- * RSA加密解密类
+ * 生成RSA密钥对，实现加减密示例
  * 说明：
  * 作者：何杨(heyang78@gmail.com)
  * 创建时间：2010-12-1 下午06:14:38
